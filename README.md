@@ -28,6 +28,7 @@ This section summarizes the conceptual knowledge gained while completing the pro
 
 **Why was Docker Compose chosen?**
 Instead of starting a single service with `docker run` using long parameters, defining the entire configuration (image, port mapping, volume mounting) in the `docker-compose.yml` file makes the command repeatable and allows the same file to be transferred exactly as-is to different environments (such as a Cloud VM).
+
 **Volume Mount Logic**
 Instead of being copied into the container, the `index.html` file is mounted via `volumes` to the `/usr/share/nginx/html` directory inside the container. This ensures that changes made to the file take effect immediately without the need to restart the container; copying the file would not provide this live connection.
 
